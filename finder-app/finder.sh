@@ -12,7 +12,7 @@ y=0 # No. of string matches in the target dir
 if [ $# -lt 2 ]
 then
     echo "ERROR: Total no. of arguments should be 2."
-	echo "ERROR: Specify 1) the path to directory and 2) the search string."
+	echo "Specify 1) the path to directory and 2) the search string."
     exit 1
 else # if it is not a directory exit with error code
     if [ -d "$1" ]

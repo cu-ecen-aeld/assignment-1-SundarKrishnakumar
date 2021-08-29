@@ -9,7 +9,8 @@ WRITESTR=""
 if [ $# -lt 2 ]
 then
     echo "ERROR: Total no. of arguments should be 2."
-	echo "ERROR: Specify 1) the path to directory and 2) the search string."
+	echo "1) A full path to the file (including filename)"
+    echo "2) Text string which will be written within this file."
     exit 1
 else # if it is not a file then exit with error code
     if [ -d "$1" ]
