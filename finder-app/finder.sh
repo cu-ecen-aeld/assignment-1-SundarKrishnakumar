@@ -25,13 +25,13 @@ else # if it is not a directory exit with error code
     fi
 fi
 
-# -r recursive
+# -R recursive. -r does not follow symbolic links. 
 # -i turn of case checking
 # --files-with-matches show only the files that have a match
 # wc -l cmd does line count on the grep output
-x=$(grep -ri "${SEARCHSTR}" "${FILESDIR}" --files-with-matches | wc -l)
+x=$(grep -Ri "${SEARCHSTR}" "${FILESDIR}" --files-with-matches | wc -l)
 
-y=$(grep -ri "${SEARCHSTR}" "${FILESDIR}" | wc -l)
+y=$(grep -Ri "${SEARCHSTR}" "${FILESDIR}" | wc -l)
 
 echo "The number of files are ${x} and the number of matching lines are ${y}"
 
