@@ -35,7 +35,7 @@ y=$(grep -Ri "${SEARCHSTR}" "${FILESDIR}" | wc -l)
 
 echo "The number of files are ${x} and the number of matching lines are ${y}"
 
-# Exit with success code
+# Exit with success code 
 exit 0
 
 
